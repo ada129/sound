@@ -53,9 +53,9 @@ public class Utils {
         Bit.setBit(result, Bit.getBit(g, j), j);
         pos++;
       }
-      byte syndromeTemp = 0;
       int tempPos = pos - 7;
-      for (int j = 0; j < 4; ) {
+      byte syndromeTemp = Bit.getBite(h[],);
+     /* for (int j = 0; j < 4; ) {
         int sum = Bit.getBit(result, tempPos) & h[j];
         sum ^= Bit.getBit(result, tempPos + 1) & h[j + 4];
         sum ^= Bit.getBit(result, tempPos + 2) & h[j + 8];
@@ -65,7 +65,7 @@ public class Utils {
         sum ^= Bit.getBit(result, tempPos + 6) & h[j + 24];
         syndromeTemp = Bit.setBit(syndromeTemp, sum, j);
         j += 1;
-      }
+      }*/
       if (syndromeTemp != 0) {
         for (int j = 0; j < 7; j++) {
           if (syndromeTemp == vectors[j]) {
